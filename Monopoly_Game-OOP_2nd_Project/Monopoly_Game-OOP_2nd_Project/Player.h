@@ -29,13 +29,13 @@ protected:
 	int m_balance;
 	bool m_in_jail;
 	int m_slot_num; // The index of the slot on board							
-	Asset* asset_arr;
 	int m_asset_arr_size;
 	Board* m_board;
 
 
 public:
 	static int player_counter;
+	Asset* asset_arr;
 
 	// Constructor
 	Player(string name, Board& BB, int balance);

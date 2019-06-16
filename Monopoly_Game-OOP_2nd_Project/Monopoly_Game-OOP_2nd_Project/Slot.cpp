@@ -148,7 +148,20 @@ string Chance::get_name() const
 bool Chance::play(Player* p)
 {
 	cout << m_order << " " << m_amount;
-
+	if (p->get_balance() + m_amount < 0)
+	{
+		cout << " You don't have enough money! " << endl;
+		if (!p->get_asset_arr_size())
+		{
+			cout << " You dont have any assets, GAME OVER! " << endl;
+			return false;
+		}
+		else
+		{
+			cout << p->asset_arr[0].get_name() << " has been sold for " << p->asset_arr[0].get_cost() << " $" << endl;
+			p->pop();
+		}
+	}
 	p->set_balance(m_amount);
 
 	return true;
