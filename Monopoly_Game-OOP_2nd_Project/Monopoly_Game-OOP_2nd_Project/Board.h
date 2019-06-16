@@ -40,5 +40,6 @@ public:
 	void add_chance_slot(const string& text, int amount);
 	friend ostream& operator<<(ostream& os, const Board& b);
 	Slot* get_slot(int inx) const;
+	void game_result_printer(Player *players);
 };
 

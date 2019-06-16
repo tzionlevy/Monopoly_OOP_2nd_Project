@@ -9,9 +9,11 @@ using namespace std;
 
 void runner()
 {
-	Board monopoly, monopoly1;
+	Board monopoly;
+	Player players[2] = { Player("Stav",monopoly, 350), Player("Ronen",monopoly, 350) };
 	cout << monopoly;
-	Player players[2] = { Player("Neta",monopoly, 350), Player("Yael",monopoly, 350) };
+	for (int i = 0; i < Player::get_counter(); i++)
+		cout << players[i];
 	monopoly.play(players);
 	return;
 }

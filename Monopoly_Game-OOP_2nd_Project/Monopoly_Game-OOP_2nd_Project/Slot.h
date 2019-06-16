@@ -5,7 +5,7 @@ using namespace std;
 
 // Project Definitions by demand
 #define min_rent 5
-#define max_rent 50
+#define max_rent 150
 #define min_cost 50
 #define max_cost 150
 

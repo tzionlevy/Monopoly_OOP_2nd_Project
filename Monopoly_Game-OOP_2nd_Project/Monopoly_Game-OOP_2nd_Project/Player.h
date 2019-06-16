@@ -15,7 +15,7 @@ using namespace std;
 #endif // _DEBUG
 
 // Project Definitions by demand
-#define GoMoney 350
+#define GoMoney 50
 
 class Slot;
 class Board;

@@ -221,7 +221,9 @@ void Board::play(Player* players)
 			break;
 		else if (a == PRINT_BOARD)
 		{
+			system("CLS");
 			cout << *this;
+			game_result_printer(players);
 			continue;
 		}
 		else if (a == PLAY)
@@ -231,7 +233,9 @@ void Board::play(Player* players)
 				cout << "GAME OVER!!!!" << endl;
 				break;
 			}
-			cout << players[player];
+			system("CLS");
+			cout << *this << endl;
+			game_result_printer(players);
 			player = (player + 1) % Player::get_counter();
 		}
 	}
@@ -241,4 +245,11 @@ void Board::play(Player* players)
 Slot* Board::get_slot(int inx) const
 {
 	return m_arr[inx];
+}
+
+
+void Board::game_result_printer(Player *players)
+{
+	for (int i = 0; i < Player::get_counter(); i++)
+		cout << players[i];
 }
